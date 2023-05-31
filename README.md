@@ -61,56 +61,7 @@ cd riverdi-eve
 make -f Makefile.linux
 ```
 
-#### Windows
 
-For Windows OS, *riverdi-eve* project can be easily compiled under *MinGW* (minimalist development environment for native Microsoft Windows applications). Please visit official [*MinGW project website*](http://www.mingw.org/) for detailed tutorials:
-```
-make -f Makefile.win32
-```
-
-#### STM32 (cross-compilation under GNU/Linux OS)
-
-1. Before building, please install the GNU compiler toolchain on your Linux platform. You can easily use toolchain shipped with recent Debian and Ubuntu versions:
-```
-sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi
-```
-2. You also might want to install some other debuggers or dedicated software for your programmer (for example *stlink*):
-```
-sudo apt-get install openocd gdb-arm-none-eabi 
-```
-3. Clone the repository:
-```
-git clone https://github.com/riverdi/riverdi-eve.git
-```
-4. Change directory to the repository folder:
-```
-cd riverdi-eve
-```
-5. Build *riverdi-eve* project:
-```
-make -f Makefile.stm32
-```
-6. Flash your device:
-```
-make -f Makefile.stm32 flash
-```
-
-#### STM32 (cross-compilation under Windows and SW4STM32 IDE)
-
-1. Clone the repository:
-```
-git clone https://github.com/riverdi/riverdi-eve.git
-```
-2. Start *SW4STM32 IDE* and import *riverdi-eve* project by choosing:
-```
-File -> New -> Other -> C/C++ -> Makefile Project with Existing Code
-```
-3. Rename *Makefile.stm32* file to *Makefile* (alternatively, replace defult build command *make* with *make -f Makefile.stm32* in *Project Properties*)
-
-4. Now you can build project by choosing:
-```
-Project -> Build All [Ctrl+B]
-```
 
 GETTING HELP
 ------------
