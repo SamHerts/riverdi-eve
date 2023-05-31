@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0)
 project(riverdi-demo)
 
+set(CMAKE_CXX_STANDARD 17)
+
 # List all C defines here
 add_compile_definitions(
         LINUX_PLATFORM
@@ -10,7 +12,7 @@ add_compile_definitions(
 )
 
 # Define optimization level here
-set(OPT "")
+#set(OPT "")
 
 # List of source files
 set(SRC
@@ -43,6 +45,6 @@ set(ASFLAGS ${COMMONFLAGS})
 set(CPFLAGS ${COMMONFLAGS})
 set(LDFLAGS ${COMMONFLAGS})
 
-add_executable(${PROJECT} ${SRC})
+add_executable(${PROJECT} ${SRC} )
 #target_compile_options(${PROJECT} PRIVATE ${CPFLAGS})
 #target_link_libraries(${PROJECT} ${LIBS})
