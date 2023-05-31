@@ -1,5 +1,6 @@
 #include "platform.h"
 #include "App_Common.h"
+#include <stdio.h>
 
 /* Global used for buffer optimization */
 Gpu_Hal_Context_t host, *phost;
@@ -12,15 +13,19 @@ int main(int argc, char *argv[])
   phost = &host;
 
   /* Init HW Hal */
+  printf("Initialize App");
   App_Common_Init(&host);
 
   /* Screen Calibration*/
   //App_Calibrate_Screen(&host);
 
   /* Show Bridgetek logo */
+  printf("Show Logo");
   App_Show_Logo(&host);
 
   /* Main application - endless loop */
+  printf("Draw Ball");
+
   SAMAPP_GPU_Ball_Stencil();
 
   /* Close all the opened handles */
