@@ -142,6 +142,8 @@ platform_spi_send_data (Gpu_Hal_Context_t  *host,
                         uint32_t            opt)
 {
   size = write (fd, data, size);
+  printf("write size to fd: %d\n", size);
+  return size;
 }
 
 
