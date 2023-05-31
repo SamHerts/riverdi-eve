@@ -109,6 +109,7 @@ Gpu_Hal_StartTransfer (Gpu_Hal_Context_t  *host,
       transfer[2] = addr & 0xFF;
       transfer[3] = DUMMY_BYTE;
 
+      printf("CS_LOW\n");
       platform_gpio_value (host, GPIO_CS, GPIO_LOW);
 
       platform_spi_send_data (host, transfer, sizeof(transfer),

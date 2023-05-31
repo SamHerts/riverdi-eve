@@ -54,8 +54,11 @@ platform_spi_init (Gpu_Hal_Context_t *host)
   /* open spi device */
 
   fd = open(SPI_DEVICE, O_RDWR);
-  if (fd < 0)
-    pabort ("can't open spi device");
+  if (fd < 0) {
+      printf("Cannot open spi device: %s\n", SPI_DEVICE);
+
+      pabort("can't open spi device");
+  }
 
   /* set and check spi mode */
 
@@ -88,6 +91,7 @@ platform_spi_init (Gpu_Hal_Context_t *host)
   if (ret == -1)
     abort();
 
+  printf("SPI Init successful\n");
   return TRUE;
 }
 

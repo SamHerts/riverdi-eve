@@ -806,10 +806,10 @@ void App_Common_Init(Gpu_Hal_Context_t *phost) {
 
 	/* read Register ID to check if chip ID series is correct */
 	chipid = Gpu_Hal_Rd8(phost, REG_ID);
-    printf("Checking Register ID");
+    printf("Checking Register ID\n");
 	while (chipid != 0x7C) {
 		chipid = Gpu_Hal_Rd8(phost, REG_ID);
-        printf("%x", chipid);
+        printf("chipid=%x\n", chipid);
 		Gpu_Hal_Sleep(100);
 	}
 
