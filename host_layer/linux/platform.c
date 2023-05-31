@@ -142,7 +142,6 @@ platform_spi_send_data (Gpu_Hal_Context_t  *host,
                         uint32_t            opt)
 {
   size = write (fd, data, size);
-  printf("write size to fd: %d\n", size);
   return size;
 }
 
@@ -156,8 +155,7 @@ platform_spi_recv_data (Gpu_Hal_Context_t  *host,
                         uint16_t            size,
                         uint32_t            opt)
 {
-  int size_of_read = read (fd, data, size);
-  printf("read size: %d", size_of_read);
+  read (fd, data, size);
 }
 
 #define GPIO_DIR        "/sys/class/gpio"
