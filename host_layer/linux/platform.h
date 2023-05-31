@@ -45,7 +45,7 @@ typedef float		float_t;
 #define SPI_DEVICE	"/dev/spidev0.0"
 #define SPI_MODE	0
 #define SPI_BITS	8
-#define SPI_SPEED_HZ	30000000
+#define SPI_SPEED_HZ	10'000'000
 
 typedef enum {
   GPIO_CS   = 13,
