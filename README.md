@@ -62,7 +62,7 @@ make -f Makefile.linux
 [Riverdi Click Interface Board](https://www.mikroe.com/riverdi-click)
 The Riverdi Click breaks out the ZIF20 connections into easily accessibly pins, the main ones used for Raspberry Pi are as depicted:
 
-![Pin Diagram](pinout.png)
+![Pin Diagram](GPIO-Pinout-Diagram-2.png)
 
 GETTING HELP
 ------------
