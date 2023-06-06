@@ -698,8 +698,10 @@ void App_Show_Logo(Gpu_Hal_Context_t *phost) {
 	Gpu_Hal_WrCmdBuf(phost, (uint8_t*) logo_graphics, sizeof(logo_graphics));
 	App_Flush_Co_Buffer(phost);
 	Gpu_Hal_WaitCmdfifo_empty(phost);
+    char* my_text = "Hello World";
+    Gpu_CoCmd_Text(phost, 0, 0, 0, 0, my_text);
 
-	for (frame = 0, ff = 0; frame < 120; frame++, ff += 550) {
+	for (frame = 0, ff = 0; frame < 120; frame++, ff += 200) {
 		Gpu_CoCmd_Dlstart(phost);
 		App_WrCoCmd_Buffer(phost, CLEAR_COLOR_RGB(255, 255, 255));
 		App_WrCoCmd_Buffer(phost, CLEAR(1, 1, 1));
