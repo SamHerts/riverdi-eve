@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
   /* Show Bridgetek logo */
   printf("Show Logo\n");
-  App_Show_Logo(&host);
+  // App_Show_Logo(&host);
 
   /* Main application - endless loop */
   printf("Draw Ball\n");
