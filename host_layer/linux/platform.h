@@ -49,7 +49,7 @@ typedef float		float_t;
 
 typedef enum {
   GPIO_CS   = 8,
-  GPIO_PD = 19,
+  GPIO_PD = 12,
   GPIO_INT  = 26
 } gpio_name;
 
