@@ -10,9 +10,10 @@ PROJECT = riverdi-demo
 
 DEFS = -DLINUX_PLATFORM
 DEFS += -DBUFFER_OPTIMIZATION
+DEFS += -DEVE_4_EXTERNAL_OSC
 
-DEFS += -DEVE_2
-DEFS += -DCTP_50
+DEFS += -DEVE_4
+DEFS += -DIPS_43
 
 # Define optimisation level here
 OPT =
@@ -55,7 +56,7 @@ LIBDIR  = $(patsubst %,-L%, $(LIBDIRS))
 LIB     = $(patsubst %,-l%, $(LIBS))
 
 # Flags
-COMMONFLAGS =
+COMMONFLAGS = -g
 ASFLAGS = $(COMMONFLAGS)
 CPFLAGS = $(COMMONFLAGS) $(DEFS)
 LDFLAGS = $(COMMONFLAGS) $(LIBDIR) $(LIB)
